@@ -10,7 +10,7 @@ services:
       - "2181:2181"
       
   kafka:
-    container: kafka1
+    container_name: kafka1
     restart: always
     image: wurstmeister/kafka
     depends_on: [ zookeeper ]
