@@ -1,11 +1,17 @@
 version: '3'
+
 services:
+
   zookeeper:
+    container_name: zookeeper1
+    restart: always
     image: wurstmeister/zookeeper
     ports:
       - "2181:2181"
       
   kafka:
+    container: kafka1
+    restart: always
     image: wurstmeister/kafka
     depends_on: [ zookeeper ]
     ports:
