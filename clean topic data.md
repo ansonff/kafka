@@ -9,10 +9,10 @@ kafka-topics.sh --zookeeper localhost:2181 --alter --topic $topic --config reten
 ## by purge log files
 ```console
 # shutdown kafka
-cd ~/service/kafka && sudo bin/zookeeper-server-stop.sh
+cd ~/service/kafka && sudo bin/kafka-server-stop.sh
 
 # shutdown zookeeper
-cd ~/service/kafka && sudo bin/kafka-server-stop.sh
+cd ~/service/kafka && sudo bin/zookeeper-server-stop.sh
 
 # locate log.dir of server.properties and delete it
 sudo rm -rf /tmp/kafka-logs/*
