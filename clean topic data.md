@@ -1,7 +1,8 @@
 # Clean Kafka Topic Data
 ## by toptic retention time
 ```console
-topic=xxxxx
+topic=sj/req/traveltapupload
+cd service/kafka/kafka_2.12-2.4.0/bin
 kafka-topics.sh --zookeeper localhost:2181 --alter --topic $topic --config retention.ms=1000
 kafka-topics.sh --zookeeper localhost:2181 --alter --topic $topic --config retention.hours=168
 ```
